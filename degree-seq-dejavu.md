@@ -1,4 +1,16 @@
-
+---
+mainfont: DejaVuSerif
+sansfont: DejaVuSans
+monofont: DejaVuSansMono
+mathfont: TeXGyreDejaVuMath-Regular
+papersize: a4
+lang: RU-ru
+pagestyle: empty
+margin-left: 20mm
+margin-right: 20mm
+margin-top: 20mm
+margin-bottom: 20mm
+---
 
 Пусть $X_j$ - случайная величина равная количеству вершин со степенью $j$ в случайном графе.
 
@@ -24,9 +36,7 @@ $$\begin{split}
 \end{split}$$
 
 
-Оценим сверху: 
-
-$C_{n-1}^j= \frac{(n-1)\cdots(n-1-j+1)}{j!} = \frac{(n-1)\cdots(n-j+1)(n-j)}{j!} < \frac{n(n-1)\cdots(n-j+1)}{j!} = C_{n}^j \,$
+Оценим сверху: $C_{n-1}^j= \frac{(n-1)\cdots(n-1-j+1)}{j!} = \frac{(n-1)\cdots(n-j+1)(n-j)}{j!} < \frac{n(n-1)\cdots(n-j+1)}{j!} = C_{n}^j$
 
 Получаем неравенство: $E(X_j) \leq \sum\limits_{i=1}^{n} C_{n-1}^j\:p^j = n\;C_{n-1}^j\:p^j \leq n\,C_n^j\:p^j$
 
