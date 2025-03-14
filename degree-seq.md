@@ -49,6 +49,44 @@ $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1
 В итоге получаем цепочку неравенств:
 $$E(Y_2) = \sum\limits_{j=2}^{n-1}E(X_j) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
 
+Доказательство, что 
+$$n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} < \sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!}$$
+
+Левая часть неравенства. Используем $j!\ge2^{j-1}$
+$$
+n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} 
+\le n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{2^{j-1}}
+= 2n\sum\limits_{j=2}^{n-1} \left(\frac{n\,p}{2}\right)^j 
+$$
+
+Здесь правая часть это геометрическая прогрессия с коффициентом меньше $\frac{np}{2} < 1$, поэтому сумма 
+
+Если $p=o(n^{-3/2})$, то $np=o(n^{-1/2})$. Отсюда следует, что начиная с некоторого $n>n_0$ будет выполняться неравенство $\frac{n\,p}{2} < 1$. Поэтому сумма не превосходит:
+
+$$
+2n \frac{1}{1-\frac{n\,p}{2}} 
+\le \frac{2n}{1-\frac{n\,p}{2}} 
+= \frac{(np)^2}{2} \frac{n}{1-\frac{n\,p}{2}}
+$$
+
+Правая часть неравенства (используем неравенство $\frac{n\,p}{2} < 1$):
+$$
+\sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!} 
+= e^{np} - 1 - \frac{np}{1!} 
+> \frac{(np)^2}{2!} + \frac{(np)^3}{3!}
+= \frac{(np)^2}{2} \left(1 + \frac{np}{3}\right)
+$$
+
+Теперь сравним левую и правую часть неравенства:
+$$
+\frac{(np)^2}{2} \frac{n}{1-\frac{n\,p}{2}} \langle?\rangle \frac{(np)^2}{2} \left(1 + \frac{np}{3}\right)\\
+$$
+$$
+\frac{n}{1-\frac{n\,p}{2}} \langle?\rangle 1 + \frac{np}{3}
+$$
+
+
+
 Если $p=o(n^{-3/2})$, то
 $$\frac{n\cdot o(n^{-3/2})}{j!} = \frac{o(n^{-1/2})}{j!} = o(\frac{1}{\sqrt{n}}) \cdot \frac{1}{j!}$$
 
