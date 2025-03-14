@@ -34,7 +34,7 @@ $$\begin{split}
 \end{split}$$
 
 
-Оценим сверху: $C_{n-1}^j= \frac{(n-1)\cdots(n-1-j+1)}{j!} = \frac{(n-1)\cdots(n-j+1)(n-j)}{j!} < \frac{n(n-1)\cdots(n-j+1)}{j!} = C_{n}^j$
+Оценим сверху: $C_{n-1}^j= \frac{(n-1)\cdots(n-1-j+1)}{j!} = \frac{(n-1)\cdots(n-j+1)(n-j)}{j!} \leq \frac{n(n-1)\cdots(n-j+1)}{j!} = C_{n}^j$
 
 Получаем неравенство: $E(X_j) \leq \sum\limits_{i=1}^{n} C_{n-1}^j\:p^j = n\;C_{n-1}^j\:p^j \leq n\,C_n^j\:p^j$
 
@@ -44,5 +44,20 @@ $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j$$
 Используем оценку для $C_{n}^j = \frac{n(n-1)\cdots(n-j+1)}{j!} \leq \frac{n^j}{j!}$
 $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
 
+Почему справедливо неравенство $n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} \leq \sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!}$
+
 В итоге получаем цепочку неравенств:
 $$E(Y_2) = \sum\limits_{j=2}^{n-1}E(X_j) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
+
+Если $p=o(n^{-3/2})$, то
+$$\frac{n\cdot o(n^{-3/2})}{j!} = \frac{o(n^{-1/2})}{j!} = o(\frac{1}{\sqrt{n}}) \cdot \frac{1}{j!}$$
+
+Обозначение $g(n) = o(\frac{1}{\sqrt{n}})$ означает, что $\lim\limits_{n\rightarrow\infty}(\sqrt{n} \cdot g(n)) = 0$
+
+$$
+\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} 
+= \frac{1}{o(\sqrt{n})} \cdot \sum\limits_{j=2}^{n-1} \frac{1}{j!} 
+\leq \frac{1}{o(\sqrt{n})} \sum\limits_{j=0}^{\infty} \frac{1}{j!} 
+= \frac{1}{o(\sqrt{n})} \cdot e
+= o(1)
+$$
