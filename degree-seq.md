@@ -44,58 +44,43 @@ $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j$$
 Используем оценку для $C_{n}^j = \frac{n(n-1)\cdots(n-j+1)}{j!} \leq \frac{n^j}{j!}$
 $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
 
-Почему справедливо неравенство $n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} \leq \sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!}$
+Почему справедливо неравенство $n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} \leq \sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!}$ ?
 
 В итоге получаем цепочку неравенств:
 $$E(Y_2) = \sum\limits_{j=2}^{n-1}E(X_j) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
 
-Доказательство, что 
-$$n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} < \sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!}$$
-
-Левая часть неравенства. Используем $j!\ge2^{j-1}$
+Используем неравенство $j!\ge2^{j-1}$
 $$
 n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} 
 \le n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{2^{j-1}}
 = 2n\sum\limits_{j=2}^{n-1} \left(\frac{n\,p}{2}\right)^j 
 $$
 
-Здесь правая часть это геометрическая прогрессия с коффициентом меньше $\frac{np}{2} < 1$, поэтому сумма 
-
-Если $p=o(n^{-3/2})$, то $np=o(n^{-1/2})$. Отсюда следует, что начиная с некоторого $n>n_0$ будет выполняться неравенство $\frac{n\,p}{2} < 1$. Поэтому сумма не превосходит:
-
+Здесь правая часть это геометрическая прогрессия с коффициентом меньше $\frac{np}{2} < 1$, поэтому геометрическая прогрессия сходится
 $$
-2n \frac{1}{1-\frac{n\,p}{2}} 
-\le \frac{2n}{1-\frac{n\,p}{2}} 
-= \frac{(np)^2}{2} \frac{n}{1-\frac{n\,p}{2}}
+2n\sum\limits_{j=2}^{n-1} \left(\frac{n\,p}{2}\right)^j 
+\le 2n\left(\frac{np}{2}\right)^2 \frac{1}{1-\frac{np}{2}}
+= \frac{n^3p^2}{2} \frac{1}{1-\frac{np}{2}}
 $$
 
-Правая часть неравенства (используем неравенство $\frac{n\,p}{2} < 1$):
+Если $p=o(n^{-3/2})$, то 
 $$
-\sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!} 
-= e^{np} - 1 - \frac{np}{1!} 
-> \frac{(np)^2}{2!} + \frac{(np)^3}{3!}
-= \frac{(np)^2}{2} \left(1 + \frac{np}{3}\right)
-$$
-
-Теперь сравним левую и правую часть неравенства:
-$$
-\frac{(np)^2}{2} \frac{n}{1-\frac{n\,p}{2}} \langle?\rangle \frac{(np)^2}{2} \left(1 + \frac{np}{3}\right)\\
-$$
-$$
-\frac{n}{1-\frac{n\,p}{2}} \langle?\rangle 1 + \frac{np}{3}
-$$
-
-
-
-Если $p=o(n^{-3/2})$, то
-$$\frac{n\cdot o(n^{-3/2})}{j!} = \frac{o(n^{-1/2})}{j!} = o(\frac{1}{\sqrt{n}}) \cdot \frac{1}{j!}$$
-
-Обозначение $g(n) = o(\frac{1}{\sqrt{n}})$ означает, что $\lim\limits_{n\rightarrow\infty}(\sqrt{n} \cdot g(n)) = 0$
-
-$$
-\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} 
-= \frac{1}{o(\sqrt{n})} \cdot \sum\limits_{j=2}^{n-1} \frac{1}{j!} 
-\leq \frac{1}{o(\sqrt{n})} \sum\limits_{j=0}^{\infty} \frac{1}{j!} 
-= \frac{1}{o(\sqrt{n})} \cdot e
+n^3p^2 
+= n^3 \left(o(n^{-3/2})\right)^2 
+= n^3 o(n^{-3})
 = o(1)
+$$
+Подставим $n^3p^2$ получаем:
+$$
+\frac{n^3p^2}{2} \frac{1}{1-\frac{np}{2}}
+= \frac{o(1)}{1-\frac{np}{2}}
+$$
+
+$$
+\lim\limits_{n\rightarrow{\infty}} \left( {1-\frac{np}{2}} \right) = 1
+$$
+
+В итоге:
+$$
+\frac{o(1)}{1-\frac{np}{2}}=o(1)
 $$
