@@ -44,8 +44,6 @@ $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j$$
 Используем оценку для $C_{n}^j = \frac{n(n-1)\cdots(n-j+1)}{j!} \leq \frac{n^j}{j!}$
 $$E(Y_2) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
 
-Почему справедливо неравенство $n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!} \leq \sum\limits_{j=2}^{\infty} \frac{(n\,p)^j}{j!}$ ?
-
 В итоге получаем цепочку неравенств:
 $$E(Y_2) = \sum\limits_{j=2}^{n-1}E(X_j) \leq n\sum\limits_{j=2}^{n-1} C_{n}^j\:p^j \leq n\sum\limits_{j=2}^{n-1} \frac{(n\,p)^j}{j!}$$
 
