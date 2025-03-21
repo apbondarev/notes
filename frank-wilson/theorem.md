@@ -10,29 +10,30 @@ margin-top: 20mm
 margin-bottom: 20mm
 ---
 
-# Теорема Франкл-Вилсон (1981)
+# Теорема Франкла-Вилсона (1981)
 
 P. Frankl, R. Wilson Intersection theorems with geometric consequences, 1981
 
-## Определение
+## Введение
+
+Пусть есть множество чисел $\{1,2,...,10\}$. Пусть множество $\mathscr{F}$ содержит все 4-х элементные подмножества множества $V$, такие что любые два элемента из $W$ не должны пересекаться по 1 элементу. То есть разрешенные пересечения $L=\{0,2,3\}$, $s=3$
+
+![](th-0.png)
+
+## Теорема 1
+
+**Theorem 1.** Пусть $\mathscr{F}$ - совокупность $k$-элементных подмножеств множества $\{1,2, ..., n\}$, и пусть $L=\{l_1, l_1, ..., l_s\}$ - подмножество множества $\{0,1, ..., k-1\}$. Пусть $\mu_0, \mu_1, ..., \mu_s$ - различные целы остатки по модулю простого числа $р$, такие что
+$$|F| = k \equiv \mu_0 \pmod{p},\tag{4}$$
+для любых двух различных множеств $F, F' \in \mathscr{F}$
+$$|F \cap F'| \equiv \mu_i \pmod{р},\quad for\: some\:i,\quad 1\le i \le s. \tag{5}$$ 
+(5)
+Тогда
+$$\mathscr{|F|} \le C_{n}^{s}$$
+
 
 ![](th-1.png)
 
-Let be а family of $k$-element subsets of $\{1,2, ..., n\}$, and suppose that $L=\{l_1, l_1, ..., l_s\}$ is а subset of $\{0,1, ..., k-1\}$.
-
-**Theorem 1.** Suppose $\mu_0, \mu_1, ..., \mu_s$ are distinct residucs modulo а primc $р$, such that
-$$
-\begin{equation}
-|F| = k \equiv \mu_0 \pmod{p},
-\end{equation}
-$$
-апс for ану two distinct $F, F' \in \mathscr{F}$
-$$|F \cap F'| \equiv \mu_i \pmod{р},\quad for\: some\:i,\quad 1\le i \le s.$$ 
-(5)
-Тћеп
-(6) F'l (modp)
-
-## Доказательство
+## Доказательство теоремы 1
 
 ![](th-2.png)
 
@@ -41,3 +42,4 @@ $$|F \cap F'| \equiv \mu_i \pmod{р},\quad for\: some\:i,\quad 1\le i \le s.$$
 ![](th-4.png)
 
 ![](th-5.png)
+
