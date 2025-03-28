@@ -1,5 +1,7 @@
 ---
-mainfont: "Cactus Classical Serif"
+mainfont: DejaVuSerif
+sansfont: DejaVuSans
+monofont: DejaVuSansMono
 mathfont: latinmodern-math.otf
 papersize: a4
 lang: RU-ru
@@ -12,6 +14,7 @@ margin-bottom: 20mm
 
 ![](image-5.png)
 
+***
 **[O]** How many *colors* are needed to color the *plane* so that no two *points* at *distance* exactly 1 from each other are the same color?
 
 **[P]** How many colors are required to paint the plane in a such way that any two points separated by distance exactly 1 both have the same color?
@@ -37,7 +40,7 @@ margin-bottom: 20mm
 **[P]** Also in 1950 Isbell found a color pattern that demonstrates the upper bound by considering congruent regular hexagons covering the plane: seven colors is enough for separation all same-colored areas on spacing more than 1.
 
 ***
-**[O]** The question of the chromatic number of the plane is termed the Hadwiger-Nelson problem, because of the contributions of Nelson just mentioned and because the 7-coloring of the hexagonal tiling was first discussed (though in another context) by Hadwiger in 1945.
+**[O]** The question of the *chromatic number of the plane* is termed the *Hadwiger-Nelson problem*, because of the contributions of Nelson just mentioned and because the *7-coloring of the hexagonal tiling* was first discussed (though in another context) by Hadwiger in 1945.
 
 **[P]** Because the 7-coloring of the hexagonal tiling was first discussed by Hadwiger in 1945 and because of the contributions of Nelson this problem of finding the chromatic number of the plane was named the Hadwiger-Nelson problem.
 
