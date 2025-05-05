@@ -23,9 +23,9 @@ $$...$$
 
 $$q_k \ge q_{k-1} + q_{k-2}$$
 $$\frac{q_k}{q_{k-1}} \ge 1 + \frac{q_{k-2}}{q_{k-1}}$$
-$$\varphi_k = \frac{q_k}{q_{k-1}}$$
-$$\varphi_k \ge 1 + \frac{1}{\varphi_{k-1}}$$
-$$\varphi_k\varphi_{k-1} \ge \varphi_{k-1} + 1$$
-$$\varphi_k\varphi_{k-1} - \varphi_{k-1} - 1 \ge 0$$
+$$\varphi_k = \frac{q_{k-1}}{q_{k-2}}$$
+$$\varphi_{k+1} \ge 1 + \frac{1}{\varphi_{k}}$$
+$$\varphi_{k+1}\varphi_{k} \ge \varphi_{k} + 1$$
+$$\varphi_{k+1}\varphi_{k} - \varphi_{k} - 1 \ge 0$$
 
 $$k=3: \frac{q_3}{q_{2}} \ge 1 + \frac{q_{1}}{q_{k-1}}$$
