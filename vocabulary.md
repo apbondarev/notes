@@ -5,21 +5,19 @@ monofont: DejaVuSansMono
 mathfont: latinmodern-math.otf
 papersize: a4
 lang: RU-ru
+title: Vocabulary List
 pagestyle: empty
 margin-left: 20mm
 margin-right: 20mm
 margin-top: 20mm
 margin-bottom: 20mm
 ---
-### Vocabulary List
-
 <style>
 table, th, td {
-   border: solid 2px;
+   border: solid 1px;
 }
 </style>
-
-| #  | Word or Phrase     | Examples                                     |
+| #  | Word or Phrase     | Example / Collocations / Definition          |
 |----|--------------------|----------------------------------------------|
 | 1  | continued fraction | - sum and product of continued fractions |
 | 2  | arbitrarily | - arbitrarily large numbers |
