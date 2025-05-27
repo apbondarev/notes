@@ -1,3 +1,17 @@
+---
+mainfont: DejaVuSerif
+sansfont: DejaVuSans
+monofont: DejaVuSansMono
+mathfont: latinmodern-math.otf
+papersize: a4
+lang: RU-ru
+pagestyle: empty
+margin-left: 20mm
+margin-right: 20mm
+margin-top: 20mm
+margin-bottom: 20mm
+---
+
 ### Приведите пример 8-однородного гиперграфа на 20 вершинах с 90 гиперрёбрами, у которого минимальная с.о.п. в точности равна 6.
 
 $$C_6^2 = \frac{6 \cdot 5}{2} = 15$$
